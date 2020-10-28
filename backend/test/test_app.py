@@ -33,4 +33,4 @@ class HelloWorldUnittest(unittest.TestCase):
         result = self.flask_app.get('/api/hello')
         print(result.data)
         # assert the status code of the response
-        self.assertEqual(result.data, b'Hello from hello-world-backend (1)')
+        self.assertEqual(result.data, b'HelloWorld from RedHat (1)')

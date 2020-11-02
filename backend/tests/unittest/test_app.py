@@ -34,3 +34,7 @@ class HelloWorldUnittest(unittest.TestCase):
         print(result.data)
         # assert the status code of the response
         self.assertEqual(result.data, b'HelloWorld from RedHat (1)')
+
+
+if __name__ == '__main__':
+    unittest.main()

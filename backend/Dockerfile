@@ -21,9 +21,14 @@ FROM registry.fedoraproject.org/fedora-minimal
 
 RUN microdnf install python3-flask && microdnf clean all
 
+RUN groupadd -r rh && useradd -r -s /bin/false -g rh helloworld
+
 COPY app.py /app/app.py
 ENV HOME=/app
 
 EXPOSE 8080
+
+RUN chown -R helloworld:rh /app
+USER helloworld
 
 CMD ["python3", "/app/app.py"]

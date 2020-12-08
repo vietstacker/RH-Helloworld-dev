@@ -41,7 +41,7 @@ def hello():
     with lock:
         count += 1
 
-    return Response(f"HelloWorld from RedHat ({count})", mimetype="text/plain")
+    return Response(f"Say Hi from RedHat ({count})", mimetype="text/plain")
 
 if __name__ == "__main__":
     app.run(host=host, port=port)
